@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Atividade ILP-540</title>
+        <style>
+            body {font-family: Arial, sans-serif;}
+            #nome01, #nome02, #nome03 {margin-left: 20px; margin-bottom: 10px;}
+        </style>
+        <script>
+		function ordenaListaNome() {
+			var nome1 = document.getElementById("nome01").value;
+			var nome2 = document.getElementById("nome02").value;
+			var nome3 = document.getElementById("nome03").value;
+			
+			var lista = document.getElementById("lista");
+
+			if (nome1 != "" || nome2 != "" || nome3 != ""){
+				
+				var arrayNomes = [nome1, nome2, nome3];
+				arrayNomes.sort();
+				
+				for (i = 0; i < arrayNomes.length; i++){
+					let item = document.createElement("li");
+					item.appendChild(document.createTextNode(arrayNomes[i].toUpperCase()));
+					lista.appendChild(item);
+				}
+			}
+			else {
+				var resposta = document.getElementById("resposta");
+				resposta.innerHTML = "<span style='color:#FF0000'> Campo em branco. </span>";
+			}
+		}
+		</script>
+    </head>
+    <body>
+        <form>
+            Nome 1: <input type="text" id="nome01"/> <br/>
+            Nome 2: <input type="text" id="nome02"/> <br/>
+            Nome 3: <input type="text" id="nome03"/> <br/><br/>
+        </form>
+
+        <button type='submit' style="width: 255px; height: 30px;" onclick="ordenaListaNome();">Listar Nomes</button>
+		<ol id="lista"></ol>
+		<div id='resposta' style="margin: 20px;"></div>
+        <hr />
+    </body>
+</html>

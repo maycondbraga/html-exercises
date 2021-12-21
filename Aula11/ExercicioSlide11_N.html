@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Atividade ILP-540</title>
+        <style>
+            body {font-family: Arial, sans-serif;}
+        </style>
+        <script>
+            function janelinha() {
+                janela = window.open ("", "janela", "width=600, height=300, top=50, left=200");
+                janela.document.open();
+                janela.document.write("<p id='textoJanela'>Javascript é muito interessante!</p><br/>");
+                janela.document.write('<button onclick="window.open("","_self").close();">Fechar Janela</button>');
+                janela.focus();
+            }
+            
+            function fechar() { janela.close(); }
+            function mudarTexto() { janela.document.getElementById("textoJanela").innerHTML = "Texto Modificado"; }
+        </script>
+    </head>
+    <body>
+        <a>
+            <button onclick="janelinha();">Abrir Janela</button> |
+            <button onclick="fechar();">Fechar Janela</button> |
+            <button onclick="mudarTexto();">Mudar Texto da Janela</button>
+        </a>
+    </body>
+</html>

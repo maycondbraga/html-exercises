@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Atividade ILP-540</title>
+        <style>
+            body {font-family: Arial, sans-serif;}
+            #nota01, #nota02, #nota03 {margin-left: 20px; margin-bottom: 10px;}
+            #peso {margin-left: 20px; margin-bottom: 10px;}
+            #altura {margin-left: 14px; margin-bottom: 10px;}
+        </style>
+        <script type="text/javascript" src="Slide08JavaScript.js"></script>
+    </head>
+    <body>
+        <p><strong>Example 1 - JavaScript Slide - D</strong></p>
+        <script>exemplo01();</script>
+        <hr />
+
+        <p><strong>Example 2 - JavaScript Slide - E</strong></p>
+        <script>exemplo02();</script>
+        <hr />
+
+        <p><strong>Exercise 1 - JavaScript Slide  - F</strong></p>
+        <form>
+            Nota 1: <input type="text" id="nota01"/> <br/>
+            Nota 2: <input type="text" id="nota02"/> <br/>
+            Nota 3: <input type="text" id="nota03"/> <br/><br/>
+        </form>
+
+        <button type='submit' style="width: 255px; height: 30px;" onclick='exercicio01()'>Verificar Nota</button>
+        <div id='resposta' style="margin: 20px;"></div>
+        <hr />
+
+        <p><strong>Example 3 - JavaScript Slide - I</strong></p>
+        <script>exemplo03();</script>
+        <hr />
+
+        <p><strong>Example 4 - JavaScript Slide - I</strong></p>
+        <script>exemplo04();</script>
+        <hr />
+
+        <p><strong>Example 5 - JavaScript Slide - I</strong></p>
+        <script>exemplo05();</script>
+        <hr />
+
+        <p><strong>Exercise 2 - JavaScript Slide - J</strong></p>
+        <form>
+            <p>Selecone uma opção:</p>
+            <input type="radio" id="optionA" name="url" value="A">
+            <label for="A">A</label><br>
+            <input type="radio" id="optionB" name="url" value="B">
+            <label for="B">B</label><br>
+            <input type="radio" id="optionC" name="url" value="C">
+            <label for="C">C</label><br>
+            <input type="radio" id="optionD" name="url" value="D">
+            <label for="D">D</label><br><br>
+        </form>
+        <button type='submit' onclick='exercicio02()'>Ir para Url</button>
+        <hr />
+
+        <p><strong>Example 6 - JavaScript Slide - O</strong></p>
+        <script>cumprimento();</script>
+        <hr />
+
+    <p><strong>Example 7 - JavaScript Slide - P</strong></p>
+    <form method="get">
+        <button type="button" onclick="cumprimento2('nome')">Bom dia</button>
+        <input placeholder="Digite seu nome" id="nome">
+    </form>
+    <p id="recebeNome"></p>
+    <hr />
+
+    <p><strong>Example 8 - JavaScript Slide - Q</strong></p>
+    <form method="get">
+        <input placeholder="Digite o primeiro nome" id="nome1"><br>
+        <input placeholder="Digite o segundo nome" id="nome2"><br><br>
+        <button type="button" onclick="cumprimento3('nome1', 'nome2')">Bom dia</button>
+    </form>
+    <p id="recebeNome2"></p>
+    <hr />
+
+    <p><strong>Example 10 - JavaScript Slide - R</strong></p>
+    <script>
+        function  cumprimento4( nome1, nome2) {
+             alert("Bom dia!! " + nome1 + " e " + nome2);
+             return "Bom dia pra você também!!";
+        }
+        var user1="José", user2="João";
+
+        var resp=cumprimento4( user1, user2);
+
+        alert(resp);
+    </script>
+
+    <p><strong>Example 11 - JavaScript Slide - S</strong></p>
+    <script>
+        var user1='José'; 
+        function  cumprimento5( nome1) {
+                        alert('Bom dia!! ' + nome1);
+                        user1='Pedro';
+        }
+        cumprimento5(user1);
+        cumprimento5(user1);
+    </script>
+
+    <p><strong>Example 12 - JavaScript Slide - V</strong></p>
+    <script>
+        var multiplicacao = function (x, y) {
+        return x * y;
+        }
+        var resultado = multiplicacao (5, 3);
+        console . log ( resultado );  
+    </script>
+
+    <p><strong>Exercise 3 - JavaScript Slide - W</strong></p>
+    <p>Calculadora de IMC</p>
+    <form>
+        Peso: <input placeholder="Digite aqui" id="peso"><br>
+        Altura: <input placeholder="Digite aqui" id="altura"><br><br>
+    </form>
+    <button type="button" style="width: 240px; height: 30px;" onclick="calculaImc('peso', 'altura')">Calcular</button><br/>
+    <br><div id="recebeImc"></div>
+    <hr />
+    </body>
+</html>
