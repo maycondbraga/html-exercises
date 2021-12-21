@@ -1,0 +1,29 @@
+<!--MAYCON DOUGLAS BRAGA DOS SANTOS RM: 20200484-->
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Prova ILP-540 - P1</title>
+        <style>
+            body {font-family: Arial, sans-serif;}
+        </style>
+        <script>
+            function imprimeElemento(elemento, indice){
+                var div = document.createElement("div");
+                div.innerHTML = "<p style='border: 2px solid black;'> Index: " + indice + " Valor: " + elemento + "</p>";
+                document.getElementById("recebeDiv").appendChild(div);
+            }
+
+            function iniciaLoop(){
+                const elementos = [10, 20, 30, 40, 50, 60, 70];
+                elementos.forEach(imprimeElemento);
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <button type="submit" onclick="iniciaLoop()">Iniciar Loop</button>
+        </div>
+        <div id="recebeDiv"></div>
+    </body>
+</html>

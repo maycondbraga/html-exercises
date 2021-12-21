@@ -1,0 +1,34 @@
+<!--MAYCON DOUGLAS BRAGA DOS SANTOS RM: 20200484-->
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Prova ILP-540 - P1</title>
+        <style>
+            body {font-family: Arial, sans-serif;}
+        </style>
+        <script>
+            function redimensionaAltura(){
+                //Captura ID da imagem
+                var imagem = document.getElementById("imagem");
+                //redimensiona a altura da imagem
+                imagem.style.height = "300px";
+            }
+            function redimensionaLargura(){
+                //Captura ID da imagem
+                var imagem = document.getElementById("imagem");
+                //redimensiona a altura da imagem
+                imagem.style.width = "400px";
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <img id="imagem" style="border:2px solid black;" src="Images/smiley.gif" width="600" height="500"></img>
+        </div>
+        <div>
+            <button type="submit" style="margin-right: 50px" onclick="redimensionaAltura()">Redimensionar Altura</button>
+            <button type="submit" onclick="redimensionaLargura()">Redimensionar Largura</button>
+        </div>
+    </body>
+</html>

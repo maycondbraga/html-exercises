@@ -1,0 +1,53 @@
+<!--MAYCON DOUGLAS BRAGA DOS SANTOS RM: 20200484-->
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Prova ILP-540 - P1</title>
+        <style>
+            body { font-family: Arial, sans-serif; }
+            .div-container { display: flex; }
+            .div { flex: 1; }
+            .div:nth-child(2) { margin-right: 20px; } 
+        </style>
+        <script>
+            function imprimeFruta() {
+                var fruta = document.querySelector('input[name="fruta"]:checked').value;
+                switch (fruta){
+                    case "goiaba":
+                        var imgFruit = document.getElementById("fruit");
+                        imgFruit.src = "Images/goiaba.jpg";
+                        break;
+                    case "banana":
+                        var imgFruit = document.getElementById("fruit");
+                        imgFruit.src = "Images/banana.jpg";
+                        break;
+                    default:
+                        var imgFruit = document.getElementById("fruit");
+                        imgFruit.src = "Images/maca.jpg";
+                        break;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="div-container">
+            <div class="div radiobutton">
+                <h1>Frutas</h1>
+                <form>
+                    <p>Selecone uma opção:</p>
+                    <input type="radio" id="optionGoiaba" name="fruta" value="goiaba">
+                    <label for="goiaba">Goiaba</label><br>
+                    <input type="radio" id="optionBanana" name="fruta" value="banana">
+                    <label for="banana">Banana</label><br>
+                    <input type="radio" id="optionMaca" name="fruta" value="maca">
+                    <label for="maca">Maça</label><br><br>
+                </form>
+                <button type='submit' onclick='imprimeFruta()'>Selecionar</button>
+            </div>
+            <div class="div imagem-fruta">
+                <img id="fruit" width="400" height="300">
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Prova ILP-540 - P2</title>
+        <style>
+            body {font-family: Arial, sans-serif;}
+        </style>
+        <script>
+            function multiplosDeNove(){
+                for (let numeroMultiplo = 0; numeroMultiplo < 54; numeroMultiplo++) {
+                    if (numeroMultiplo % 9 == 0){
+                        var div = document.createElement("div");
+                        div.innerHTML = "<p style='border: 2px solid black;'> Número " + numeroMultiplo + " é múltiplo de 9.</p>";
+                        document.getElementById("recebeDiv").appendChild(div);
+                    }
+                }
+                document.getElementById("btnLoop").disabled = true;
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <h2>Imprime múltiplos de 9 até o número 54</h2>
+            <button id="btnLoop" type="submit" onclick="multiplosDeNove()">Iniciar Contagem</button>
+        </div>
+        <div id="recebeDiv"></div>
+    </body>
+</html>

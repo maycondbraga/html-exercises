@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Prova ILP-540 - P2</title>
+        <style>
+            body {font-family: Arial, sans-serif;}
+        </style>
+        <script>
+		function buscaDisciplina() {
+            var ListaDeDisciplina = { 
+                'LPIV': 'Paulo Roberto Bernice',
+                'ISO100': 'Dionisio Gava Junior',
+                'MET100': 'Katsuyoshi Kurata',
+                'IWH100': 'Milton Silva Da Rocha',
+                'IED001': 'Victor Antonio Troitiño'
+            }; 
+			
+            var disciplina = document.getElementById("disciplina").value;
+            var resposta = document.getElementById("resposta");
+			
+			if (disciplina !== ""){
+                var achou = false;
+                for (let disc in ListaDeDisciplina) {
+                    if (disc === disciplina.toUpperCase()) {
+				        resposta.innerHTML = "<p> Professor da Disciplina " + disciplina + ": " + ListaDeDisciplina[disc] + " </p>";
+                        achou = true;
+                        break;
+                    }
+                }
+                if (!achou){
+                    resposta.innerHTML = "<span style='color:#FF0000'> Disciplina não encontrada. </span>";
+                }
+			}
+			else {
+				resposta.innerHTML = "<span style='color:#FF0000'> Campo em branco. </span>";
+			}
+		}
+		</script>
+    </head>
+    <body>
+        <form>
+            Disciplina: <input type="text" id="disciplina" value="LPIV"/> 
+        </form>
+        <br />
+        <button type='submit' style="width: 255px; height: 30px;" onclick="buscaDisciplina();">Buscar</button>
+		<div id='resposta' style="margin: 20px;"></div>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Prova P2 ILP-540</title>
+        <style>
+            body {font-family: Arial, sans-serif;}
+        </style>
+        <script>
+            var hora = 0;
+            var minuto = 0;
+            var segundo = 0;
+            var milisegundo = 0;
+            var cron;
+ 
+            function inicio() {
+                termino();
+                cron = setInterval(() => { timer(); }, 10);
+            }
+ 
+            function termino() {
+                clearInterval(cron);
+            }
+ 
+            function timer() {
+                if ((milisegundo += 10) == 1000) {
+                    milisegundo = 0;
+                    segundo++;
+                }
+                if (segundo == 60) {
+                    segundo = 0;
+                    minuto++;
+                }
+                if (minuto == 60) {
+                    minuto = 0;
+                    hora++;
+                }
+               
+                var h = hora >= 10 ? hora : '0' + hora;
+                var m = minuto >= 10 ? minuto : '0' + minuto;
+                var s = segundo >= 10 ? segundo : '0' + segundo;
+                var mm = milisegundo >= 10 ? milisegundo : '0' + milisegundo;
+ 
+                var c = h + ":" + m + ":" + s + ":" + mm;
+                document.getElementById("cronometro").value = c;
+            }
+        </script>
+    </head>
+    <body>
+        <label for="cronometro">Cronometro: </label>
+        <input type="text" id="cronometro" disabled>
+        <br /><br />
+        <button type="button" name="start" onclick="inicio();">Inicio</button>
+        <button type="button" name="pause" onclick="termino();">Termino</button>
+    </body>
+</html>

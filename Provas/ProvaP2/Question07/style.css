@@ -1,0 +1,28 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    align-content: center;
+    height: 100vh;
+}
+
+.form, .dados{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    border: 10px greenyellow solid;
+    margin: 10px;
+    padding: 10px;
+}
+
+.dados td{
+    padding: 5px;
+}

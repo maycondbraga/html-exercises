@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Prova P2 ILP-540</title>
+        <style>
+            body {font-family: Arial, sans-serif;}
+            #cronometroTotal {margin-left: 15px;}
+        </style>
+        <script>
+            var horaTotal = 0;
+            var minutoTotal = 0;
+            var segundoTotal = 0;
+            var milisegundoTotal = 0;
+            var cronTotal;
+            
+            var horaParcial = 0;
+            var minutoParcial = 0;
+            var segundoParcial = 0;
+            var milisegundoParcial = 0;
+            var cronParcial;
+ 
+            function inicioTotal() {
+                cronTotal = setInterval(() => { timerTotal(); }, 10);
+            }
+            function inicioParcial() {
+                cronParcial = setInterval(() => { timerParcial(); }, 10);
+            }
+ 
+            function terminoTotal() {
+                clearInterval(cronTotal);
+                clearInterval(cronParcial);
+            }
+
+            function terminoParcial() {
+                clearInterval(cronParcial);
+            }
+ 
+            function timerTotal() {
+                if ((milisegundoTotal += 10) == 1000) {
+                    milisegundoTotal = 0;
+                    segundoTotal++;
+                }
+                if (segundoTotal == 60) {
+                    segundoTotal = 0;
+                    minutoTotal++;
+                }
+                if (minutoTotal == 60) {
+                    minutoTotal = 0;
+                    horaTotal++;
+                }
+               
+                var h = horaTotal >= 10 ? horaTotal : '0' + horaTotal;
+                var m = minutoTotal >= 10 ? minutoTotal : '0' + minutoTotal;
+                var s = segundoTotal >= 10 ? segundoTotal : '0' + segundoTotal;
+                var mm = milisegundoTotal >= 10 ? milisegundoTotal : '0' + milisegundoTotal;
+ 
+                var c = h + ":" + m + ":" + s + ":" + mm;
+                document.getElementById("cronometroTotal").value = c;
+            }
+ 
+            function timerParcial() {
+                if ((milisegundoParcial += 10) == 1000) {
+                    milisegundoParcial = 0;
+                    segundoParcial++;
+                }
+                if (segundoParcial == 60) {
+                    segundoParcial = 0;
+                    minutoParcial++;
+                }
+                if (minutoParcial == 60) {
+                    minutoParcial = 0;
+                    horaParcial++;
+                }
+               
+                var hp = horaParcial >= 10 ? horaParcial : '0' + horaParcial;
+                var mp = minutoParcial >= 10 ? minutoParcial : '0' + minutoParcial;
+                var sp = segundoParcial >= 10 ? segundoParcial : '0' + segundoParcial;
+                var mmp = milisegundoParcial >= 10 ? milisegundoParcial : '0' + milisegundoParcial;
+ 
+                var cp = hp + ":" + mp + ":" + sp + ":" + mmp;
+                document.getElementById("cronometroParcial").value = cp;
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <div>
+                <label for="cronometroTotal">Cronometro Total: </label>
+                <input type="text" id="cronometroTotal" disabled>
+                <button type="button" name="start" onclick="inicioTotal();">Inicio</button>
+                <button type="button" name="pause" onclick="terminoTotal();">Termino</button>
+            </div>
+            <br/><br/>
+            <div>
+                <label for="cronometroParcial">Cronometro Parcial: </label>
+                <input type="text" id="cronometroParcial" disabled>
+                <button type="button" name="start" onclick="inicioParcial();">Inicio</button>
+                <button type="button" name="pause" onclick="terminoParcial();">Termino</button>
+            </div>
+        </form>
+        <br/><br/>
+        
+        
+    </body>
+</html>

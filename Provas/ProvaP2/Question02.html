@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Prova ILP-540 - P2</title>
+        <style>
+            body {font-family: Arial, sans-serif;}
+            #nome01, #nome02, #nome03 {margin-left: 20px; margin-bottom: 10px;}
+        </style>
+        <script>
+		function ordenaListaNome() {
+            do{
+                var total = parseInt(prompt('Total de nomes: '));
+            }while(isNaN(total) || total < 1);
+            var arrayNomes = [];
+            for (var i = 0; i < total; i++){
+                var nome = prompt('Digite o ' + Number(i+1) +'º nome: ');
+                arrayNomes.push(nome);
+            }
+            arrayNomes.forEach(element => {
+                if (element === '' || element === null){
+                    alert('Nome vazio ou nulo');
+                    return false;
+                }
+            });
+
+            arrayNomes.sort().reverse();
+			var lista = document.getElementById("lista");
+			
+            for (i = 0; i < total; i++){
+                let item = document.createElement("li");
+                item.appendChild(document.createTextNode(arrayNomes[i].toLowerCase()));
+                lista.appendChild(item);
+            }
+		}
+		</script>
+    </head>
+    <body onload="ordenaListaNome()">
+		<ol id="lista"></ol>
+		<div id='resposta' style="margin: 20px;"></div>
+    </body>
+</html>

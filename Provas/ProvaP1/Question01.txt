@@ -1,0 +1,6 @@
+1) Defina e explique o que é HTML
+
+HTML (Hypertext Markup Language) é a linguagem de marcação utilizada para construir as páginas na internet. 
+A linguagem permite que o desenvolvedor codifique sua estrutura base (com as tags e atributos) para organizar a página, 
+permitindo o uso de diversos elementos, sejam textos, imagens, videos, etc. 
+Atualmente o HTML é utilizado como estrutura base da página web, mas sua estilização é feita pelas linguagens CSS e JavaScript.
