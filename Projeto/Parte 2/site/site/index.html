@@ -1,0 +1,64 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Parte 2</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="before-form">
+        <header>Agência de Turismo - FDGMS </header>
+        <h1>Cadastro na Newsletter</h1>
+        <p>
+            Aproveite sua visita e se cadastre na nossa newsletter para<br>ser o primeiro a receber nossas promoções e
+            pacotes
+            especiais!
+        </p>
+    </div>
+
+    <form action="./insertDB.php" method="post">
+        <div class="label">
+            <label for="name">Nome:</label>
+        </div>
+        <input type="text" name="name" id="name" placeholder="John Doe">
+        <br><br>
+
+        <div class="label">
+            <label for="phone">Telefone:</label>
+        </div>
+        <input type="tel" name="phone" id="phone" placeholder="94002-8922" pattern="[0-9]{5}-[0-9]{4}" required>
+        <br><br>
+
+        <div class="label">
+            <label for="email">Email:</label>
+        </div>
+        <input type="email" name="email" id="email" placeholder="example@email.com" required>
+        <br><br>
+
+        <div class="label">
+            <label for="gender">Gênero:</label>
+        </div>
+        <div class="gender-radios">
+            <div class="radio-item">
+                <input type="radio" name="gender" id="male" value="male" text="Masculino"> Masculino
+            </div>
+            <div class="radio-item">
+                <input type="radio" name="gender" id="female" value="female"> Feminino
+            </div>
+            <div class="radio-item">
+                <input type="radio" name="gender" id="other" value="other"> Outros
+            </div>
+        </div>
+        <br>
+        <input class="id-input" type="text" id="idInput" value="">
+        <br>
+
+        <input type="submit" name="submit" id="submit" value="Enviar" onClick="generateId()">
+    </form>
+    <script src="index.js"></script>
+</body>
+
+</html>

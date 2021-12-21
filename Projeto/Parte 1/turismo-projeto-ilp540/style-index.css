@@ -1,0 +1,53 @@
+.div-container { 
+    display: flex; 
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.div-text { 
+    flex: 1; 
+    padding-left: 3%;
+}
+
+.titulo {
+    padding-top: 5%;
+    font-size: 36px;
+}
+
+.texto {
+    padding-top: 3%;
+    text-align: justify;
+    font-size: 36px;
+}
+
+.div-img { 
+	margin-right: 2%; 
+}
+
+.lista {
+    margin-left: 3%;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.lista-u {
+    margin-left: 3%;
+}
+
+.lista-o {
+    margin-left: 3%;
+    font-size: 1.2rem;
+}
+
+.item-u {
+    font-weight: 500 !important;
+}
+
+.item-o {
+    font-weight: 300;
+}
+
+.spacer {
+    height: 50px;
+    width: 100%;
+}

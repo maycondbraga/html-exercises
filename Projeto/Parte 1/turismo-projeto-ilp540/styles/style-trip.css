@@ -1,0 +1,119 @@
+.main-section {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+}
+
+.form-odd {
+    background-color: transparent;
+}
+
+.form-even {
+    background-color: #1FA0E9;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.trip-button {
+    width: 15%;
+    min-height: 70px;
+    min-width: 100px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 20px;
+    font-size: 1.1rem;
+}
+
+.destination-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.one-destination {
+    display: flex;
+    width: 100%;
+}
+
+.br-destination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-image: url(../assets/brasil.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.us-destination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-image: url(../assets/eua.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.eng-destination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-image: url(../assets/inglaterra.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.jp-destination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-image: url(../assets/japao.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.destination-button {
+    width: 200px;
+    height: 70px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 20px;
+    font-size: 1.1rem;
+}
+
+.destination-background {
+    height: 80%;
+    height: 90%;
+    overflow: hidden;
+}
+
+.submit {
+    font-size: 1.5rem;
+}
+
+.submit-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20%;
+}
